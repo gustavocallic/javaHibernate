@@ -20,8 +20,8 @@ public class AlunoDao {
     EntityManager em;
     
     public AlunoDao(){
-        emf = Persistence.createEntityManagerFactory("tcc");
-        em = emf.createEntityManager();
+        emf = Persistence.createEntityManagerFactory("tcc");//abrir a conexão(sessão) com o banco
+        em = emf.createEntityManager();// realiza as operações (CRUD)
     }
     public void Salvar(Aluno aln){
         em.getTransaction().begin();//inicia transação no banco
